@@ -37,6 +37,8 @@ public class ControladorMaletas : MonoBehaviour
         {
             Debug.Log("Exito");
             ManejoReloj.Instance.Puzle1Terminado();
+            //Me retorna un string.
+            GameManager.Instance._timeLevel1 = ManejoReloj.Instance.TimeLevel();
         }
         
     }

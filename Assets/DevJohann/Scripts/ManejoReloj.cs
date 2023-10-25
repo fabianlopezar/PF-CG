@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System;
 
@@ -18,10 +15,14 @@ public class ManejoReloj : MonoBehaviour
     private float timerTime;
     private bool isRunning = false;
 
-    public float StartTime { get => startTime; set => startTime = value; }
-    public float StopTime { get => stopTime; set => stopTime = value; }
-    public float TimerTime { get => timerTime; set => timerTime = value; }
-    public bool IsRunning { get => isRunning; set => isRunning = value; }
+    int minutesInt;
+    int secondsInt ;
+    int seconds100Int ;
+
+    public float StartTime;
+    public float StopTime;
+    public float TimerTime;
+    public bool IsRunning;
 
     private void Awake()
     {
@@ -35,10 +36,6 @@ public class ManejoReloj : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
-    }
-    void Start()
-    {
-        TimerReset();  
     }
 
     public void TimerReset()
@@ -63,21 +60,19 @@ public class ManejoReloj : MonoBehaviour
     public void TimerStop()
     {
         if (isRunning)
-        {
-            print("STOP");
+        {     
             isRunning = false;
             stopTime = timerTime;
-            Debug.Log(stopTime.ToString());
         }
+        //Debug.Log("Tiempo Final fue de: " + minutesInt +":"+ secondsInt+":" + seconds100Int);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timerTime = stopTime + (Time.time - startTime);
-        int minutesInt = (int)timerTime / 60;
-        int secondsInt = (int)timerTime % 60;
-        int seconds100Int = (int)(Math.Floor((timerTime - (secondsInt + minutesInt * 60)) * 100));
+         minutesInt = (int)timerTime / 60;
+         secondsInt = (int)timerTime % 60;
+         seconds100Int = (int)(Math.Floor((timerTime - (secondsInt + minutesInt * 60)) * 100));
         if (isRunning)
         {
             textMin.text = (minutesInt < 10) ? "0" + minutesInt : minutesInt.ToString();
@@ -89,7 +84,12 @@ public class ManejoReloj : MonoBehaviour
     public void Puzle1Terminado()
     {
         TimerStop();
-        //
+     
+    }
+    public string TimeLevel()//atrapo el tiempo jugado y lo devuelvo.
+    {
+        string timeLevelcath = minutesInt + ":" + secondsInt + ":" + seconds100Int;
+        return timeLevelcath;
     }
     
 }
