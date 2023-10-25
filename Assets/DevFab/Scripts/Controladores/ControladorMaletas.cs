@@ -9,7 +9,14 @@ public class ControladorMaletas : MonoBehaviour
     public bool[] maletas;
     public bool maleta;
 
+    public Animator animator;
+
     private void Awake()
+    {
+        Instanciar();
+    }
+
+    private void Instanciar()
     {
         if (Instance == null)
         {
@@ -22,23 +29,27 @@ public class ControladorMaletas : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
+
     void Start()
+    {
+        IniciarCronometro();
+        
+    }
+
+    private void IniciarCronometro()
     {
         ManejoReloj.Instance.TimerStart();
         maleta = false;
     }
-    void Update()
-    {
-        
-    }
+
     public void PuzleMaletasCompletado()
     {
         if (maletas[0]==true&& maletas[1] == true&&maletas[2] == true && maletas[3] == true && maletas[4] == true)
         {
-            Debug.Log("Exito");
             ManejoReloj.Instance.Puzle1Terminado();
-            //Me retorna un string.
             GameManager.Instance._timeLevel1 = ManejoReloj.Instance.TimeLevel();
+            //Activar Animacion Puerta.
+            animator.SetBool("Abrir", true);
         }
         
     }
