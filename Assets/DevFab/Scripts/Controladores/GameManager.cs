@@ -23,5 +23,26 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this.gameObject);
     }
+    public void TiempoNivelSuperado(int numeroNivel)
+    {
+        switch (numeroNivel)
+        {
+            case 1:
+                GameManager.Instance._timeLevel1 = ManejoReloj.Instance.TimeLevel();
+                break;
+            case 2:
+                GameManager.Instance._timeLevel2 = ManejoReloj.Instance.TimeLevel();
+                break;
+            case 3:
+                GameManager.Instance._timeLevel3 = ManejoReloj.Instance.TimeLevel();
+                break;
+            case 4:
+                GameManager.Instance._timeLevel4 = ManejoReloj.Instance.TimeLevel();
+                break;
+            default:
+                Debug.LogWarning("Estado no reconocido.");
+                break;
+        }
+    }
 
 }

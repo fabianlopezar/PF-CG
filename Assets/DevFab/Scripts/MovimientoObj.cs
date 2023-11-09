@@ -11,10 +11,10 @@ public class MovimientoObj : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        moveH += speedH * Input.GetAxis("Mouse X");
-        moveV -= speedV * Input.GetAxis("Mouse Y");
+        moveH -= speedH * Input.GetAxis("Mouse X");
+        //moveV += speedV * Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(-moveV, moveH, 0f);
+        transform.eulerAngles = new Vector3(0f, moveH, 0f);
     }
 
 }//
