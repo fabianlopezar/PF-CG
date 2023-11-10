@@ -6,7 +6,7 @@ public class ControladorMaletas : MonoBehaviour
 
     public bool[] maletas;
     public bool maleta;
-
+    public int nivelActual;
     public Animator animator;
 
     private void Awake()
@@ -25,13 +25,12 @@ public class ControladorMaletas : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+     //   DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
-        IniciarCronometro();
-        
+        IniciarCronometro();        
     }
 
     private void IniciarCronometro()
@@ -42,12 +41,20 @@ public class ControladorMaletas : MonoBehaviour
 
     public void PuzleMaletasCompletado()
     {
-        if (maletas[0]==true&& maletas[1] == true&&maletas[2] == true && maletas[3] == true && maletas[4] == true)
+        bool todosCompletados = true;
+        for (int i = 0; i < maletas.Length; i++)
         {
-            ManejoReloj.Instance.Puzle1Terminado();
-            GameManager.Instance._timeLevel1 = ManejoReloj.Instance.TimeLevel();
-            //Activar Animacion Puerta.
-            animator.SetBool("Abrir", true);
+            if (!maletas[i])
+            {
+                todosCompletados = false;
+                break;
+            }
+        }
+        if (todosCompletados)//Si todos son verdaderos
+        {
+            ManejoReloj.Instance.Puzle1Terminado(); //Detener el cronometro.
+            GameManager.Instance.TiempoNivelSuperado(nivelActual);//guardar el tiempo jugado.
+            animator.SetBool("Abrir", true); //Activar Animacion Puerta.
         }
         
     }
