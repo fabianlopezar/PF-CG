@@ -42,6 +42,15 @@ public class CambiarTextoNota : MonoBehaviour
                 _textoNota.text = "La Cola tiene varios métodos: encolar, desencolar y estaVacia.";
                 break;
             case 6:
+                _textoNota.text = "La primera posicion es D.";
+                break;
+            case 7:
+                _textoNota.text = "";
+                break;
+            case 8:
+                _textoNota.text = "";
+                break;
+            case 9:
                 _textoNota.text = "";
                 break;
 

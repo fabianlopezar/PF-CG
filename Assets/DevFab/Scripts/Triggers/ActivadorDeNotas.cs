@@ -6,14 +6,7 @@ public class ActivadorDeNotas : MonoBehaviour
     public bool activador;
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E)&& activador == true)
-        {
-            _notaVisual.SetActive(true);
-        }
-        if(Input.GetKeyDown(KeyCode.Escape)&& activador == true)
-        {
-            _notaVisual.SetActive(false);
-        }
+     _notaVisual.SetActive(true);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -23,11 +16,6 @@ public class ActivadorDeNotas : MonoBehaviour
             activador = true;
             CambiarTextoNota.Instance.CambiarTextoNotasUI(idObject.id);
         }
-    /*    if (other.tag == "Player")
-        {
-            activador = true;
-        }*/
-
     }
     private void OnTriggerExit(Collider other)
     {
