@@ -6,10 +6,26 @@ public class ActivadorDeNotas : MonoBehaviour
     public bool activador;
     private void Update()
     {
-     _notaVisual.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.E) && activador == true)
+        {
+            _notaVisual.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && activador == true)
+        {
+            _notaVisual.SetActive(false);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.tag=="Player")
+        {
+            _notaVisual.SetActive(true);
+        }
+        /*if (Input.GetKeyDown(KeyCode.Escape) && activador == true)
+        {
+            _notaVisual.SetActive(false);
+        }*/
         IDObject idObject = other.GetComponent<IDObject>();
         if (idObject)
         {

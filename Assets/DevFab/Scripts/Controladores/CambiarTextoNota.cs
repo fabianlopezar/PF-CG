@@ -9,6 +9,19 @@ public class CambiarTextoNota : MonoBehaviour
     {
         Instanciar();
     }
+    private void Start()
+    {
+        string name = "TMP-Nota";
+        GameObject objEncontrado = GameObject.Find(name);
+        if (objEncontrado != null)
+        {
+            _textoNota = objEncontrado.GetComponent<TMP_Text>();
+        }
+        else
+        {
+            Debug.Log("CambiarTextoNotas: Deberia existir un TMP en pantalla.");
+        }
+    }
     private void Instanciar()
     {
         if (Instance == null)
@@ -42,16 +55,16 @@ public class CambiarTextoNota : MonoBehaviour
                 _textoNota.text = "La Cola tiene varios métodos: encolar, desencolar y estaVacia.";
                 break;
             case 6:
-                _textoNota.text = "La primera posicion es D.";
+                _textoNota.text = "Mueve los cubos para poder ordenar el arbol.";
                 break;
             case 7:
-                _textoNota.text = "";
+                _textoNota.text = "La primera posicion es la D.";
                 break;
             case 8:
-                _textoNota.text = "";
+                _textoNota.text = "La segunda posicion es la A.";
                 break;
             case 9:
-                _textoNota.text = "";
+                _textoNota.text = "La tercera posicion es la I.";
                 break;
 
             default:
