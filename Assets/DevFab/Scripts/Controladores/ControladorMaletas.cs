@@ -9,6 +9,10 @@ public class ControladorMaletas : MonoBehaviour
     public int nivelActual;
     public Animator animator;
 
+    public AudioClip miAudio;
+    public bool audioVerdadero = false;
+    private AudioSource audioSource;
+
     private void Awake()
     {
         Instanciar();
@@ -30,7 +34,8 @@ public class ControladorMaletas : MonoBehaviour
 
     void Start()
     {
-        IniciarCronometro();        
+        IniciarCronometro();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void IniciarCronometro()
@@ -55,6 +60,10 @@ public class ControladorMaletas : MonoBehaviour
             ManejoReloj.Instance.Puzle1Terminado(); //Detener el cronometro.
             GameManager.Instance.TiempoNivelSuperado(nivelActual);//guardar el tiempo jugado.
             animator.SetBool("Abrir", true); //Activar Animacion Puerta.
+                                             // Asigna el AudioClip al AudioSource
+            audioSource.clip = miAudio;
+            // Reproduce el audio
+            audioSource.Play();
         }
         
     }
