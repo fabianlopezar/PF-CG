@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maletas: 00000000000000
   maleta: 0
-  nivelActual: 3
+  nivelActual: 2
   animator: {fileID: 103504457}
   miAudio: {fileID: 8300000, guid: 792d7ff7e549fec4a836a45738f30fe4, type: 3}
   audioVerdadero: 0
@@ -1760,7 +1760,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

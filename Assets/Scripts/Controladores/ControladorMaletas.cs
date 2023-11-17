@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorMaletas : MonoBehaviour
 {
@@ -29,13 +30,14 @@ public class ControladorMaletas : MonoBehaviour
         {
             Destroy(gameObject);
         }
-     //   DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
         IniciarCronometro();
         audioSource = GetComponent<AudioSource>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void IniciarCronometro()
@@ -66,5 +68,12 @@ public class ControladorMaletas : MonoBehaviour
             audioSource.Play();
         }
         
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Este método se ejecutará después de cargar la escena
+        //Debug.Log("Escena cargada: " + scene.name);
+      
+        // Aquí puedes poner el código que deseas ejecutar después de cambiar de escena
     }
 }
