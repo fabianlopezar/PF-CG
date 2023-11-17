@@ -1,13 +1,13 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ManejoReloj : MonoBehaviour
 {
     public static ManejoReloj Instance { get; set; }
     public TMP_Text textMin;
     public TMP_Text textSeg;
-
     public TMP_Text textMilS;
 
     private float startTime;
@@ -24,6 +24,11 @@ public class ManejoReloj : MonoBehaviour
     public float TimerTime;
     public bool IsRunning;
 
+    private void Start()
+    {
+        EncontrarVariables();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
     private void Awake()
     {
         if (Instance == null)
@@ -36,6 +41,7 @@ public class ManejoReloj : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this.gameObject);
+ 
     }
 
     public void TimerReset()
@@ -69,18 +75,24 @@ public class ManejoReloj : MonoBehaviour
 
     void Update()
     {
+        Cronometro();
+    }
+
+    private void Cronometro()
+    {
         timerTime = stopTime + (Time.time - startTime);
-         minutesInt = (int)timerTime / 60;
-         secondsInt = (int)timerTime % 60;
-         seconds100Int = (int)(Math.Floor((timerTime - (secondsInt + minutesInt * 60)) * 100));
+        minutesInt = (int)timerTime / 60;
+        secondsInt = (int)timerTime % 60;
+        seconds100Int = (int)(Math.Floor((timerTime - (secondsInt + minutesInt * 60)) * 100));
         if (isRunning)
         {
             textMin.text = (minutesInt < 10) ? "0" + minutesInt : minutesInt.ToString();
             textSeg.text = (secondsInt < 10) ? "0" + secondsInt : secondsInt.ToString();
             textMilS.text = (seconds100Int < 10) ? "0" + seconds100Int : seconds100Int.ToString();
+         //   Debug.Log(minutesInt + "-" + seconds100Int + "-" + seconds100Int);
         }
-        
     }
+
     public void Puzle1Terminado()
     {
         TimerStop();
@@ -91,5 +103,35 @@ public class ManejoReloj : MonoBehaviour
         string timeLevelcath = minutesInt + ":" + secondsInt + ":" + seconds100Int;
         return timeLevelcath;
     }
-    
+    public void EncontrarVariables()
+    {
+        GameObject text1 = GameObject.Find("TextMin");
+        GameObject text2 = GameObject.Find("TextSeg");
+        GameObject text3 = GameObject.Find("TextMilS");
+        if (text1 != null)
+        {
+            textMin = text1.GetComponent<TMP_Text>();
+        }
+        if (text2 != null)
+        {
+            textSeg = text2.GetComponent<TMP_Text>();
+        }
+        if (text3 != null)
+        {
+            textMilS = text3.GetComponent<TMP_Text>();
+        }
+
+        else
+        {
+            Debug.Log("Manejo reloj: Deberia existir un TMP en pantalla.");
+        }
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Este método se ejecutará después de cargar la escena
+        //Debug.Log("Escena cargada: " + scene.name);
+        EncontrarVariables();
+        TimerReset();
+        // Aquí puedes poner el código que deseas ejecutar después de cambiar de escena
+    }
 }

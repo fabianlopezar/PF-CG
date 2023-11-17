@@ -1472,7 +1472,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maletas: 0000000000
   maleta: 0
+  nivelActual: 0
   animator: {fileID: 381234132}
+  miAudio: {fileID: 0}
+  audioVerdadero: 0
 --- !u!4 &429686301
 Transform:
   m_ObjectHideFlags: 0
@@ -1629,7 +1632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &487624364
 Transform:
   m_ObjectHideFlags: 0
