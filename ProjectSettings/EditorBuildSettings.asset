@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenas Finales/Inicio.unity
+    guid: d10bada991bcdd542b72ebbc95a1187d
+  - enabled: 1
     path: Assets/Scenas Finales/1.unity
     guid: 4218ec0f45f218e46834aec0bf940cb3
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenas Finales/3.unity
     guid: 100ca552dd982f94ca97368d81fa4a3d
-  - enabled: 1
-    path: Assets/DevFab/Scenas - Antiguas/Antiguo - 1.unity
-    guid: 0e5859179f7de02469bc637723aa4add
   - enabled: 1
     path: Assets/Scenas Finales/2.unity
     guid: 7aecaa40970aea544998058d7a6e82d0
