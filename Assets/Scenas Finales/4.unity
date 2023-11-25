@@ -532,7 +532,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -592,7 +592,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad33bb6b4fb57b41af4d7c42c90b6d1, type: 2}
+  - {fileID: 2100000, guid: 25408b8b6f07d2241806d72b06b1ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1283,7 +1283,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1343,6 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 1
   posicionLetra: 1
+  objCambiarColor: {fileID: 1337911651}
 --- !u!65 &202416658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1431,7 +1432,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1464,6 +1465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 2
   posicionLetra: 2
+  objCambiarColor: {fileID: 1443189949}
 --- !u!54 &212849164
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1714,7 +1716,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1747,6 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 4
   posicionLetra: 4
+  objCambiarColor: {fileID: 1635264153}
 --- !u!54 &225075852
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2727,7 +2730,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3900,7 +3903,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3933,6 +3936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 6
   posicionLetra: 6
+  objCambiarColor: {fileID: 939041654}
 --- !u!54 &819803042
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4111,7 +4115,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4171,7 +4175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ad33bb6b4fb57b41af4d7c42c90b6d1, type: 2}
+  - {fileID: 2100000, guid: 25408b8b6f07d2241806d72b06b1ebb0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4506,7 +4510,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4539,6 +4543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 3
   posicionLetra: 3
+  objCambiarColor: {fileID: 759150766}
 --- !u!54 &868391007
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4788,7 +4793,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6767,7 +6772,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6800,6 +6805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 5
   posicionLetra: 5
+  objCambiarColor: {fileID: 6952538}
 --- !u!54 &1304954218
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7548,7 +7554,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7652,6 +7658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letraRequerida: 0
   posicionLetra: 0
+  objCambiarColor: {fileID: 1389867993}
 --- !u!54 &1355141627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8963,7 +8970,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10184,7 +10191,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -11061,7 +11068,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

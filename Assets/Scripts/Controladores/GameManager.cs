@@ -44,5 +44,9 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+    public void ObtenerNombrePlayer(string nombrePlayer)
+    {
+        GameManager.Instance._namePlayer = nombrePlayer;
+    }
 
 }

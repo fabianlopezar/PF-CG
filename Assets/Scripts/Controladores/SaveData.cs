@@ -2,6 +2,8 @@ using TMPro;
 using UnityEngine;
 using System.IO;
 
+[SerializeField]
+//Craerconstructor 
 public class Data
 {
     public string _name;
@@ -24,12 +26,13 @@ public class SaveData : MonoBehaviour
         data._level2 = GameManager.Instance._timeLevel2;
         data._level3 = GameManager.Instance._timeLevel3;
         data._level4 = GameManager.Instance._timeLevel4;
-
+        
+        MostrarDatosGuardados();
         string jsonData = JsonUtility.ToJson(data);
         
         File.WriteAllText(dataFilePath, jsonData);
 
-        MostrarDatosGuardados();
+        
     }
     public void MostrarDatosGuardados()
     {

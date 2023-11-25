@@ -4,7 +4,7 @@ public class TriggerLetras : MonoBehaviour
 {
     public int letraRequerida;
     public int posicionLetra;
-
+    public GameObject objCambiarColor;
     private void OnTriggerStay(Collider other)
     {
 
@@ -15,14 +15,18 @@ public class TriggerLetras : MonoBehaviour
             {
                 ControladorMaletas.Instance.maletas[posicionLetra] = true;
                 ControladorMaletas.Instance.PuzleMaletasCompletado();
+                Renderer renderer = objCambiarColor.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material.color = Color.green;
+                }
             }
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-    }
+
     private void OnTriggerExit(Collider other)
     {
         ControladorMaletas.Instance.maletas[posicionLetra] = false;
+        
     }
 }

@@ -1,6 +1,5 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
-
 public class ChangeLevel : MonoBehaviour
 {
     public static ChangeLevel Instance { get;  set; }
