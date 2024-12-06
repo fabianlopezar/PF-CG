@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 1882283763}
   - component: {fileID: 1882283762}
   - component: {fileID: 1882283764}
+  - component: {fileID: 1882283765}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -802,7 +803,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -820,6 +821,19 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &1882283765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882283760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63651495585658541ad10c11af7e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoFileName: v3.mp4
 --- !u!1 &1903441896
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +981,7 @@ GameObject:
   - component: {fileID: 1938856862}
   - component: {fileID: 1938856861}
   - component: {fileID: 1938856860}
+  - component: {fileID: 1938856863}
   m_Layer: 5
   m_Name: RawImage (1)
   m_TagString: Untagged
@@ -1012,7 +1027,7 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 0
+  m_DataSource: 1
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -1065,6 +1080,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938856858}
   m_CullTransparentMesh: 1
+--- !u!114 &1938856863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938856858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63651495585658541ad10c11af7e1db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoFileName: video.mp4
 --- !u!1 &2070192522
 GameObject:
   m_ObjectHideFlags: 0
