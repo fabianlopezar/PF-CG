@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenas Finales/Inicio.unity
     guid: d10bada991bcdd542b72ebbc95a1187d
   - enabled: 1
-    path: Assets/Scenas Finales/1.unity
+    path: Assets/Scenas Finales/1 desecho.unity
     guid: 4218ec0f45f218e46834aec0bf940cb3
   - enabled: 1
     path: Assets/Scenas Finales/4.unity
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenas Finales/T4.unity
     guid: 76ac4a575cd327b4ea91298b304e9ca3
+  - enabled: 1
+    path: Assets/Scenas Finales/1.unity
+    guid: 5678430d3b2085b4eb6ea6311eeb6760
   m_configObjects: {}
